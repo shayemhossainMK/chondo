@@ -1,43 +1,97 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useRef } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import google from "../../imgs/google.svg";
-import facebook from "../../imgs/facebook.png";
+import {
+  useSignInWithEmailAndPassword,
+  useSignInWithGoogle,
+} from "react-firebase-hooks/auth";
+import { auth } from "../../firebase.init";
+import "react-toastify/dist/ReactToastify.css";
+import { toast, ToastContainer } from "react-toastify";
+import { sendPasswordResetEmail } from "firebase/auth";
 
 const Login = () => {
+  const emailRef = useRef("");
+  const passwordRef = useRef("");
+  const [signInWithEmailAndPassword, user, loading, error] =
+    useSignInWithEmailAndPassword(auth);
+  const [signInWithGoogle, googleUser, googleLoading, googleError] =
+    useSignInWithGoogle(auth);
+  const navigate = useNavigate();
+
+  const handleLogin = async (e) => {
+    e.preventDefault();
+    const email = emailRef.current.value;
+    const password = passwordRef.current.value;
+    await signInWithEmailAndPassword(email, password);
+  };
+  const resetPassword = () => {
+    const email = emailRef.current.value;
+    sendPasswordResetEmail(email);
+    toast("Reset email send!");
+  };
+  let errorElement;
+  if (error) {
+    errorElement = (
+      <div>
+        <p className="text-primary text-xs mt-2 px-3">
+          User or password are not valid!
+          <span
+            onClick={resetPassword}
+            className="text-green-400 ml-1 cursor-pointer underline"
+          >
+            Forget password?
+          </span>
+        </p>
+      </div>
+    );
+  }
+  if (user || googleUser) {
+    navigate("/");
+  }
   return (
     <div className="flex justify-center items-center h-screen">
       <div class="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
         <h1 className="text-xl text-center font-semibold pt-5">Login Please</h1>
         <div class="card-body">
-          <div class="form-control">
-            <label class="label">
-              <span class="label-text">Email</span>
-            </label>
-            <input
-              type="text"
-              placeholder="email"
-              class="input input-bordered"
-            />
-          </div>
-          <div class="form-control">
-            <label class="label">
-              <span class="label-text">Password</span>
-            </label>
-            <input
-              type="text"
-              placeholder="password"
-              class="input input-bordered"
-            />
-            <label class="label text-xs">
-              Don't have account?
-              <p className="text-pink-500 ml-2 text-sm">
-                <Link to="/signup">create a new account</Link>
-              </p>
-            </label>
-          </div>
-          <div class="form-control mt-6">
-            <button class="btn btn-primary">Login</button>
-          </div>
+          <form action="" onSubmit={handleLogin}>
+            <div class="form-control">
+              <label class="label">
+                <span class="label-text">Email</span>
+              </label>
+              <input
+                type="email"
+                name="email"
+                ref={emailRef}
+                placeholder="email"
+                class="input input-bordered"
+              />
+            </div>
+            <div class="form-control">
+              <label class="label">
+                <span class="label-text">Password</span>
+              </label>
+              <input
+                type="password"
+                name="password"
+                ref={passwordRef}
+                placeholder="password"
+                class="input input-bordered"
+              />
+              <label class="label text-xs">
+                Don't have account?
+                <p className="text-pink-500 ml-2 text-sm">
+                  <Link to="/signup">create a new account</Link>
+                </p>
+              </label>
+            </div>
+            {errorElement}
+            <div class="form-control mt-6">
+              <button type="submit" class="btn btn-primary">
+                Login
+              </button>
+            </div>
+          </form>
         </div>
         <div className="flex justify-center pb-5">
           <button
@@ -48,6 +102,7 @@ const Login = () => {
           </button>
         </div>
       </div>
+      <ToastContainer></ToastContainer>
     </div>
   );
 };
