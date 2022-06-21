@@ -25,7 +25,7 @@ const AddBlogs = () => {
     //   .then((res) => res.json())
     //   .then((result) => console.log(result));
 
-    const url = `http://localhost:5000/blogs`;
+    const url = `https://guarded-reef-42297.herokuapp.com/blogs`;
     fetch(url, {
       method: "POST",
       headers: {
@@ -78,23 +78,23 @@ const AddBlogs = () => {
                 </div>
                 <div class="form-control">
                   <label class="label">
-                    <span class="label-text">Like Amaount</span>
+                    <span class="label-text">Like Amount</span>
                   </label>
                   <input
                     type="text"
                     name="like"
-                    placeholder="Like amaout"
+                    placeholder="Like amount"
                     class="input input-bordered"
                   />
                 </div>
                 <div class="form-control">
                   <label class="label">
-                    <span class="label-text">Views Amaout</span>
+                    <span class="label-text">Views Amount</span>
                   </label>
                   <input
                     type="text"
                     name="views"
-                    placeholder="Views amaout"
+                    placeholder="Views amount"
                     class="input input-bordered"
                   />
                 </div>
