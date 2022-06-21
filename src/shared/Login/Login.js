@@ -51,34 +51,34 @@ const Login = () => {
   }
   return (
     <div className="flex justify-center items-center h-screen">
-      <div class="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+      <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
         <h1 className="text-xl text-center font-semibold pt-5">Login Please</h1>
-        <div class="card-body">
+        <div className="card-body">
           <form action="" onSubmit={handleLogin}>
-            <div class="form-control">
-              <label class="label">
-                <span class="label-text">Email</span>
+            <div className="form-control">
+              <label className="label">
+                <span className="label-text">Email</span>
               </label>
               <input
                 type="email"
                 name="email"
                 ref={emailRef}
                 placeholder="email"
-                class="input input-bordered"
+                className="input input-bordered"
               />
             </div>
-            <div class="form-control">
-              <label class="label">
-                <span class="label-text">Password</span>
+            <div className="form-control">
+              <label className="label">
+                <span className="label-text">Password</span>
               </label>
               <input
                 type="password"
                 name="password"
                 ref={passwordRef}
                 placeholder="password"
-                class="input input-bordered"
+                className="input input-bordered"
               />
-              <label class="label text-xs">
+              <label className="label text-xs">
                 Don't have account?
                 <p className="text-pink-500 ml-2 text-sm">
                   <Link to="/signup">create a new account</Link>
@@ -86,8 +86,8 @@ const Login = () => {
               </label>
             </div>
             {errorElement}
-            <div class="form-control mt-6">
-              <button type="submit" class="btn btn-primary">
+            <div className="form-control mt-6">
+              <button type="submit" className="btn btn-primary">
                 Login
               </button>
             </div>

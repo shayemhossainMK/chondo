@@ -5,7 +5,7 @@ const HomeBanner = () => {
   return (
     <div className="max-h-[500px]">
       <div>
-        <img className="h-[450px] w-full" src={bannerImg} alt="" />
+        <img className="md:h-[450px] w-full" src={bannerImg} alt="" />
       </div>
     </div>
   );
