@@ -3,6 +3,7 @@ import React from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { Link } from "react-router-dom";
 import { auth } from "../../firebase.init";
+import chondoLogo from "../../imgs/Chondo Logo.svg";
 
 const Navbar = () => {
   const [user] = useAuthState(auth);
@@ -49,7 +50,9 @@ const Navbar = () => {
               )}
             </ul>
           </div>
-          <a className="btn btn-ghost  text-xl uppercase">Chondo</a>
+          <Link to="/" className="btn btn-ghost  text-xl uppercase">
+            <img className="w-12" src={chondoLogo} alt="" />
+          </Link>
         </div>
         <div className="navbar hidden lg:flex">
           <ul className="menu menu-horizontal p-0 uppercase">

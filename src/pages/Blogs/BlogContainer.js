@@ -1,9 +1,15 @@
 import { faEye, faThumbsUp } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const BlogContainer = ({ blog }) => {
-  const { name, text, img, like, views } = blog;
+  const navigate = useNavigate();
+  const { _id, name, text, img, like, views } = blog;
+
+  const navigateBlogDetails = () => {
+    navigate(`/blogdetails/${_id}`);
+  };
 
   return (
     <div>
@@ -26,7 +32,10 @@ const BlogContainer = ({ blog }) => {
           <p>{text.lenght <= 200 ? text : text.slice(0, 200) + `...`}</p>
         </div>
         <div className="mt-3 px-5">
-          <button className="btn btn-primary btn-sm text-white">
+          <button
+            onClick={() => navigateBlogDetails(_id)}
+            className="btn btn-primary btn-sm text-white"
+          >
             Read more
           </button>
         </div>

@@ -1,8 +1,8 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import AddBlogs from "./pages/AddBlogs/AddBlogs";
+import BlogDetails from "./pages/Blogs/BlogDetails";
 import Blogs from "./pages/Blogs/Blogs";
-import HomeBlogDetails from "./pages/Home/BlogDetails";
 import Home from "./pages/Home/Home";
 import Login from "./shared/Login/Login";
 import Navbar from "./shared/Navbar/Navbar";
@@ -27,8 +27,8 @@ function App() {
           }
         ></Route>
         <Route
-          path="/blogdetails"
-          element={<HomeBlogDetails></HomeBlogDetails>}
+          path="/blogdetails/:id"
+          element={<BlogDetails></BlogDetails>}
         ></Route>
       </Routes>
     </div>

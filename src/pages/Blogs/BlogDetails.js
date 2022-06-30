@@ -1,22 +1,21 @@
 import { faEye, faThumbsUp } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
-import { Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
+import useBlogDetails from "../../hooks/useBlogDetails";
 
-const HomeBlogContainer = ({ blog }) => {
-  const { name, img, text, like, views } = blog;
+const BlogDetails = () => {
+  const id = useParams();
+  const [blog, setBlog] = useBlogDetails(id);
+  const { _id, name, text, img, like, views } = blog;
+
   return (
-    <div>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:w-[750px] mx-auto mt-5 mb-20 shadow-xl drop-shadow-md rounded-2xl p-5">
+    <div className="px-4 md:px-32">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4  mx-auto mt-5 md:mt-10 mb-20 p-5">
         <div className="col-span-2 order-2 md:order-1">
           <div>
-            <Link to="/blogdetails">
-              <h1 className="text-3xl font-bold mt-1 hover:underline">
-                {name}
-              </h1>
-            </Link>
-            <p className="mt-1">{text}</p>
-            <div className="flex mt-2">
+            <h1 className="text-3xl font-bold mt-1">{name}</h1>
+            <div className="flex mt-2 mb-5">
               <p className="mr-4">
                 <FontAwesomeIcon className="text-blue-500" icon={faThumbsUp} />{" "}
                 {like} Likes
@@ -26,14 +25,15 @@ const HomeBlogContainer = ({ blog }) => {
                 {views} views
               </p>
             </div>
+            <p className="mt-1">{text}</p>
           </div>
         </div>
         <div className="order-1 md:order-2">
-          <img className="h-48 w-full md:w-96" src={img} alt="" />
+          <img className="h-72 w-[700px]" src={img} alt="" />
         </div>
       </div>
     </div>
   );
 };
 
-export default HomeBlogContainer;
+export default BlogDetails;
