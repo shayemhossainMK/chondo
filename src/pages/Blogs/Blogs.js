@@ -11,7 +11,7 @@ const Blogs = () => {
   }, []);
   return (
     <div className="py-16">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-5 w-[800px] mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:w-[800px] mx-auto">
         {blogs.map((blog) => (
           <BlogContainer key={blog._id} blog={blog}></BlogContainer>
         ))}
