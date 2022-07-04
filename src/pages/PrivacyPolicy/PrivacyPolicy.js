@@ -2,7 +2,7 @@ import React from "react";
 
 const PrivacyPolicy = () => {
   return (
-    <div className="py-10 px-10">
+    <div className="py-10 px-5 md:px-10">
       <input type="checkbox" id="my-modal-3" class="modal-toggle" />
 
       <h3 class="text-lg font-bold text-center">Privacy Policy</h3>
