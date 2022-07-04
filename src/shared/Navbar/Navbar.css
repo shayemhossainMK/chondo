@@ -1,0 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&family=Ubuntu:wght@700&display=swap");
+
+/* font-family: 'Nunito', sans-serif;
+font-family: 'Ubuntu', sans-serif; */
+.nav-container {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: bold;
+}

@@ -1,9 +1,12 @@
+import { faUser } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { signOut } from "firebase/auth";
 import React from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { Link } from "react-router-dom";
 import { auth } from "../../firebase.init";
 import chondoLogo from "../../imgs/Chondo Main Logo.svg";
+import "./Navbar.css";
 
 const Navbar = () => {
   const [user] = useAuthState(auth);
@@ -11,7 +14,7 @@ const Navbar = () => {
     signOut(auth);
   };
   return (
-    <div className="bg-pink-200">
+    <div className="bg-pink-200 nav-container">
       <div className="navbar shadow-xl px-3 md:px-20">
         <div className="navbar-center ">
           <div className="dropdown">
@@ -50,17 +53,23 @@ const Navbar = () => {
               )}
             </ul>
           </div>
-          <Link to="/" className="btn btn-ghost  text-xl uppercase">
-            <img className="w-12" src={chondoLogo} alt="" />
-          </Link>
         </div>
-        <div className="navbar hidden lg:flex">
-          <ul className="menu menu-horizontal p-0 uppercase">
+        <div className="navbar  mx-auto hidden lg:flex">
+          <ul className="menu menu-horizontal mx-auto p-0 uppercase">
+            <Link to="/" className="mx-auto  text-xl uppercase">
+              <img className="w-10" src={chondoLogo} alt="" />
+            </Link>
             <li>
               <Link to="/">Home</Link>
             </li>
             <li>
               <Link to="/blogs">Blogs</Link>
+            </li>
+            <li>
+              <Link to="/">About Us</Link>
+            </li>
+            <li>
+              <Link to="/">#BleedWithPride</Link>
             </li>
             {user ? (
               <li>
@@ -69,9 +78,22 @@ const Navbar = () => {
             ) : (
               ""
             )}
+
+            {user ? (
+              <button onClick={logout} className="btn btn-xs btn-outline">
+                Logout
+              </button>
+            ) : (
+              <Link to="/login">
+                <FontAwesomeIcon
+                  className="ring-2 rounded-full p-1 mx-2 ring-black h-3"
+                  icon={faUser}
+                ></FontAwesomeIcon>
+              </Link>
+            )}
           </ul>
         </div>
-        <div className="navbar-end">
+        <div className="w-full text-end block md:hidden">
           {user ? (
             <button onClick={logout} className="btn btn-xs btn-outline">
               Logout

@@ -7,7 +7,7 @@ const Footer = () => {
       <footer class="footer footer-center p-10 bg-[#FFD7E7] text-primary-content">
         <div>
           <img className="h-24" src={logo} alt="" />
-          <p class="font-bold">
+          <p class="font-bold text-black">
             CHONDO <br />
             Track Your Period Know Your Body
           </p>
@@ -17,7 +17,7 @@ const Footer = () => {
               Privacy Policy
             </Link>
           </div>
-          <p>Copyright © 2022 - All right reserved</p>
+          <p className="text-black">Copyright © 2022 - All right reserved</p>
         </div>
         <div>
           <div class="grid grid-flow-col gap-4">

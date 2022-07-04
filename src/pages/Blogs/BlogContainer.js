@@ -13,12 +13,17 @@ const BlogContainer = ({ blog }) => {
 
   return (
     <div>
-      <div className="bg-base-100 shadow-xl rounded-2xl py-5 h-auto">
+      <div className="bg-base-100 grid grid-cols-1 md:grid-cols-2 shadow-xl rounded-2xl py-5 h-auto">
         <div>
           <img className="w-96 h-[250px] p-2" src={img} alt="" />
         </div>
         <div className="px-5">
-          <h1 className="font-semibold text-xl mt-2 mb-1">{name}</h1>
+          <h1
+            className="font-semibold text-xl mt-2 mb-1"
+            style={{ fontFamily: "Ubuntu" }}
+          >
+            {name}
+          </h1>
           <div className="flex mt-2">
             <p className="mr-4 mb-4">
               <FontAwesomeIcon className="text-blue-500" icon={faThumbsUp} />{" "}
@@ -29,15 +34,15 @@ const BlogContainer = ({ blog }) => {
               views
             </p>
           </div>
-          <p>{text.lenght <= 200 ? text : text.slice(0, 200) + `...`}</p>
-        </div>
-        <div className="mt-3 px-5">
-          <button
+          <p style={{ fontFamily: "Nunito" }}>
+            {text.lenght <= 200 ? text : text.slice(0, 200) + `...`}
+          </p>
+          <p
             onClick={() => navigateBlogDetails(_id)}
-            className="btn btn-primary btn-sm text-white"
+            className="mt-3 underline hover:cursor-pointer text-primary"
           >
             Read more
-          </button>
+          </p>
         </div>
       </div>
     </div>

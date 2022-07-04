@@ -18,12 +18,15 @@ const HomeBlogContainer = ({ blog }) => {
           <div>
             <h1
               onClick={() => navigateBlogDetails(_id)}
-              className="text-3xl font-bold mt-1 hover:underline"
+              className="text-2xl font-bold mt-1 hover:underline"
+              style={{ fontFamily: "Ubuntu" }}
             >
               {name}
             </h1>
 
-            <p className="mt-1">{text}</p>
+            <p className="mt-1" style={{ fontFamily: "Nunito" }}>
+              {text}
+            </p>
             <div className="flex mt-2">
               <p className="mr-4">
                 <FontAwesomeIcon className="text-blue-500" icon={faThumbsUp} />{" "}

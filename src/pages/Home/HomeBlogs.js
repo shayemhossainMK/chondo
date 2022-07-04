@@ -13,7 +13,12 @@ const HomeBlogs = () => {
   return (
     <div className="px-3 md:px-20 py-5  items-center">
       <div>
-        <h1 className="text-center text-3xl mt-5">Our Recent Blogs</h1>
+        <h1
+          className="text-center text-3xl mt-5"
+          style={{ fontFamily: "Ubuntu" }}
+        >
+          Our Recent Blogs
+        </h1>
         <hr className="w-48 mx-auto mb-10 mt-2 text-red-500" />
       </div>
       <div>
