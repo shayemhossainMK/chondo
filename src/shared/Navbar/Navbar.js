@@ -84,12 +84,7 @@ const Navbar = () => {
                 ></FontAwesomeIcon>
               </button>
             ) : (
-              <Link to="/login">
-                <FontAwesomeIcon
-                  className="ring-2 rounded-full p-1 mx-2 ring-black h-3"
-                  icon={faUser}
-                ></FontAwesomeIcon>
-              </Link>
+              ""
             )}
           </ul>
         </div>
@@ -99,12 +94,7 @@ const Navbar = () => {
               Logout
             </button>
           ) : (
-            <Link to="/login">
-              <FontAwesomeIcon
-                className="ring-2 rounded-full p-1 mx-2 ring-black h-3"
-                icon={faUser}
-              ></FontAwesomeIcon>
-            </Link>
+            ""
           )}
         </div>
       </div>
