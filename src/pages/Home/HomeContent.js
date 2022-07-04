@@ -4,7 +4,7 @@ import homeImg2 from "../../imgs/homeImg2.png";
 const HomeContent = () => {
   return (
     <div>
-      <div className="md:px-20 px-4 py-10">
+      <div className="md:px-36 px-4 py-10">
         <div className="grid grid-cols-1 md:grid-cols-2">
           <div>
             <img className="h-72" src={homeImg1} alt="" />
@@ -21,7 +21,7 @@ const HomeContent = () => {
         </div>
       </div>
       <div className="bg-[#FFF7FA]">
-        <div className="grid grid-cols-1 md:grid-cols-2 md:px-20 px-5 py-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 md:px-36 px-5 py-10">
           <div className="flex flex-col items-start">
             <h2 className="text-3xl font-bold">No Shame In Sharing</h2>
             <p className=" my-4 text-lg">
