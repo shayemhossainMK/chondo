@@ -4,6 +4,7 @@ import AddBlogs from "./pages/AddBlogs/AddBlogs";
 import BlogDetails from "./pages/Blogs/BlogDetails";
 import Blogs from "./pages/Blogs/Blogs";
 import Home from "./pages/Home/Home";
+import PrivacyPolicy from "./pages/PrivacyPolicy/PrivacyPolicy";
 import Footer from "./shared/Footer/Footer";
 import Login from "./shared/Login/Login";
 import Navbar from "./shared/Navbar/Navbar";
@@ -30,6 +31,10 @@ function App() {
         <Route
           path="/blogdetails/:id"
           element={<BlogDetails></BlogDetails>}
+        ></Route>
+        <Route
+          path="/privacypolicy"
+          element={<PrivacyPolicy></PrivacyPolicy>}
         ></Route>
       </Routes>
       <Footer></Footer>
