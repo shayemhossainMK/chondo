@@ -50,7 +50,7 @@ const Login = () => {
     navigate("/");
   }
   return (
-    <div className="flex justify-center items-center h-screen">
+    <div className="flex justify-center items-center h-[600px] md:h-screen">
       <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
         <h1 className="text-xl text-center font-semibold pt-5">Login Please</h1>
         <div className="card-body">

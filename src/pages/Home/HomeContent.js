@@ -9,7 +9,7 @@ const HomeContent = () => {
           <div>
             <img className="h-72" src={homeImg1} alt="" />
           </div>
-          <div className="flex flex-col items-end">
+          <div className="flex flex-col items-end pr-3 md:pr-0 mt-7 md:mt-0">
             <h2 className="text-3xl font-bold">Accept Who You Are</h2>
             <p className="text-end my-4 text-lg">
               General Texts General Texts General Texts General Texts <br />
@@ -21,7 +21,7 @@ const HomeContent = () => {
         </div>
       </div>
       <div className="bg-[#FFF7FA]">
-        <div className="grid grid-cols-1 md:grid-cols-2 md:px-20 px-4 py-16 md:py-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 md:px-20 px-5 py-10">
           <div className="flex flex-col items-start">
             <h2 className="text-3xl font-bold">No Shame In Sharing</h2>
             <p className=" my-4 text-lg">

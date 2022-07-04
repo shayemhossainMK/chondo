@@ -6,9 +6,9 @@ const HomeBanner = () => {
   return (
     <div className="bg-[#FFF7FA]">
       <div className="md:py-10">
-        <div className="flex justify-center items-center">
-          <div className="flex flex-col justify-center">
-            <h1 className="text-5xl font-bold mb-5">
+        <div className=" grid grid-cols-1 px-5 md:px-0 pt-16 md:pt-0 md:flex md:justify-center md:items-center">
+          <div className="flex flex-col justify-center items-center md:items-start">
+            <h1 className="text-4xl md:text-5xl font-bold md:mb-5">
               Track Your Period <br /> Know Your Body
             </h1>
             <div className="mt-10 flex ">
@@ -27,7 +27,11 @@ const HomeBanner = () => {
             </div>
           </div>
           <div className="">
-            <img className="h-[500px]" src={bannerImg} alt="" />
+            <img
+              className="h-72 mx-auto my-5 md:my-0 md:h-[500px]"
+              src={bannerImg}
+              alt=""
+            />
           </div>
         </div>
       </div>

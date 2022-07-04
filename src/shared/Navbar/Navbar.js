@@ -14,7 +14,7 @@ const Navbar = () => {
     signOut(auth);
   };
   return (
-    <div className="bg-pink-200 nav-container">
+    <div className="bg-accent nav-container">
       <div className="navbar shadow-xl px-3 md:px-20">
         <div className="navbar-center ">
           <div className="dropdown">
@@ -100,7 +100,10 @@ const Navbar = () => {
             </button>
           ) : (
             <Link to="/login">
-              <button className="btn btn-xs">Login</button>
+              <FontAwesomeIcon
+                className="ring-2 rounded-full p-1 mx-2 ring-black h-3"
+                icon={faUser}
+              ></FontAwesomeIcon>
             </Link>
           )}
         </div>
