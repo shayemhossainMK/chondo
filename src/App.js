@@ -4,6 +4,7 @@ import AddBlogs from "./pages/AddBlogs/AddBlogs";
 import BlogDetails from "./pages/Blogs/BlogDetails";
 import Blogs from "./pages/Blogs/Blogs";
 import Home from "./pages/Home/Home";
+import Footer from "./shared/Footer/Footer";
 import Login from "./shared/Login/Login";
 import Navbar from "./shared/Navbar/Navbar";
 import RequireAuth from "./shared/RequireAuth/RequireAuth";
@@ -31,6 +32,7 @@ function App() {
           element={<BlogDetails></BlogDetails>}
         ></Route>
       </Routes>
+      <Footer></Footer>
     </div>
   );
 }

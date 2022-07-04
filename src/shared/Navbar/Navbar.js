@@ -3,7 +3,7 @@ import React from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { Link } from "react-router-dom";
 import { auth } from "../../firebase.init";
-import chondoLogo from "../../imgs/Chondo Logo.svg";
+import chondoLogo from "../../imgs/Chondo Main Logo.svg";
 
 const Navbar = () => {
   const [user] = useAuthState(auth);
