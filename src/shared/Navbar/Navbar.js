@@ -68,12 +68,6 @@ const Navbar = () => {
             <li>
               <Link to="/blogs">Blogs</Link>
             </li>
-            <li>
-              <Link to="/">About Us</Link>
-            </li>
-            <li>
-              <Link to="/">#BleedWithPride</Link>
-            </li>
             {user ? (
               <li>
                 <Link to="/addblog">Add a new blog</Link>

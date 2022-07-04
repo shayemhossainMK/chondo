@@ -8,7 +8,10 @@ const HomeBanner = () => {
       <div className="md:py-10">
         <div className=" grid grid-cols-1 px-5 md:px-0 pt-16 md:pt-0 md:flex md:justify-evenly md:items-center">
           <div className="flex flex-col justify-center items-center md:items-start">
-            <h1 className="text-6xl md:text-5xl font-bold md:mb-5">
+            <h1
+              className="text-4xl md:text-5xl font-bold md:mb-5"
+              style={{ fontFamily: "Ubuntu" }}
+            >
               Track Your Period <br /> Know Your Body
             </h1>
             <div className="mt-10 flex ">

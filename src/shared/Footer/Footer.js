@@ -7,7 +7,7 @@ const Footer = () => {
       <footer class="footer footer-center p-10 bg-[#FFD7E7] text-primary-content">
         <div>
           <img className="h-24" src={logo} alt="" />
-          <p class="font-bold text-black">
+          <p class="font-bold text-black" style={{ fontFamily: "Ubuntu" }}>
             CHONDO <br />
             Track Your Period Know Your Body
           </p>
