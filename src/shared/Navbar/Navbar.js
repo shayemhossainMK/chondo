@@ -1,4 +1,7 @@
-import { faUser } from "@fortawesome/free-solid-svg-icons";
+import {
+  faArrowRightFromBracket,
+  faUser,
+} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { signOut } from "firebase/auth";
 import React from "react";
@@ -80,8 +83,11 @@ const Navbar = () => {
             )}
 
             {user ? (
-              <button onClick={logout} className="btn btn-xs btn-outline">
-                Logout
+              <button onClick={logout}>
+                <FontAwesomeIcon
+                  className="ring-2 rounded-full p-1 mx-2 ring-black h-3"
+                  icon={faArrowRightFromBracket}
+                ></FontAwesomeIcon>
               </button>
             ) : (
               <Link to="/login">
