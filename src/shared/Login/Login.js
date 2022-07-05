@@ -81,7 +81,9 @@ const Login = () => {
               <label className="label text-xs">
                 Don't have account?
                 <p className="text-pink-500 ml-2 text-sm">
-                  <Link to="/signup">create a new account</Link>
+                  <Link to="/onlychondoadmincanbehere/signup">
+                    create a new account
+                  </Link>
                 </p>
               </label>
             </div>
@@ -92,14 +94,6 @@ const Login = () => {
               </button>
             </div>
           </form>
-        </div>
-        <div className="flex justify-center pb-5">
-          <button
-            onClick={() => signInWithGoogle()}
-            className="p-3 bg-base-100 shadow-xl drop-shadow-xl rounded-full"
-          >
-            <img src={google} alt="" />
-          </button>
         </div>
       </div>
       <ToastContainer></ToastContainer>

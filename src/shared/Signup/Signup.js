@@ -68,7 +68,9 @@ const Signup = () => {
                 <label className="label text-xs">
                   Already have an account?
                   <p className="text-pink-500 hover:text-pink-300 text-sm ml-2">
-                    <Link to="/login">please login here</Link>
+                    <Link to="/onlychondoadmincanbehere/login">
+                      please login here
+                    </Link>
                   </p>
                 </label>
               </div>
@@ -79,15 +81,6 @@ const Signup = () => {
                 </button>
               </div>
             </form>
-            <div className="divider">OR</div>
-            <div className="flex justify-center">
-              <button
-                onClick={() => signInWithGoogle()}
-                className="p-3 bg-base-100 shadow-xl drop-shadow-xl rounded-full"
-              >
-                <img src={google} alt="" />
-              </button>
-            </div>
           </div>
         </div>
       </div>
