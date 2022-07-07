@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { signOut } from "firebase/auth";
 import React from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { auth } from "../../firebase.init";
 import useAdmin from "../../hooks/useAdmin";
 import chondoLogo from "../../imgs/Chondo Main Logo.svg";
@@ -14,9 +14,11 @@ import "./Navbar.css";
 
 const Navbar = () => {
   const [user] = useAuthState(auth);
+  const navigate = useNavigate(auth);
   const [admin] = useAdmin(user);
   const logout = () => {
     signOut(auth);
+    navigate("/");
   };
   return (
     <div className="bg-accent nav-container">
