@@ -9,7 +9,7 @@ const ManageChondo = () => {
       .then((data) => setBlogs(data));
   }, [blogs]);
   return (
-    <div className="bg-pink-50 h-screen">
+    <div className="bg-pink-50 pb-10">
       <div className="py-10 text-center uppercase  text-primary ">
         <h2 className="text-2xl font-semibold">All Blog</h2>
         <p className="text-sm text-black">
