@@ -17,7 +17,7 @@ const BlogContainer = ({ blog }) => {
         <div>
           <img className="w-96 h-[250px] p-2" src={img} alt="" />
         </div>
-        <div className="px-5">
+        <div className="px-2">
           <h1
             className="font-semibold text-xl mt-2 mb-1"
             style={{ fontFamily: "Ubuntu" }}

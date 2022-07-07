@@ -4,6 +4,7 @@ import AddBlogs from "./pages/AddBlogs/AddBlogs";
 import BlogDetails from "./pages/Blogs/BlogDetails";
 import Blogs from "./pages/Blogs/Blogs";
 import Home from "./pages/Home/Home";
+import ManageChondo from "./pages/ManageChondo/ManageChondo";
 import PrivacyPolicy from "./pages/PrivacyPolicy/PrivacyPolicy";
 import Footer from "./shared/Footer/Footer";
 import Login from "./shared/Login/Login";
@@ -37,6 +38,14 @@ function App() {
         <Route
           path="/blogdetails/:id"
           element={<BlogDetails></BlogDetails>}
+        ></Route>
+        <Route
+          path="/managechondo"
+          element={
+            <RequireAuth>
+              <ManageChondo></ManageChondo>
+            </RequireAuth>
+          }
         ></Route>
         <Route
           path="/privacypolicy"
