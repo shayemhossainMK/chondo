@@ -11,7 +11,7 @@ const Blogs = () => {
   }, []);
   return (
     <div className="py-16 bg-[#FFF7FA]">
-      <div className="text-center pb-10 px-5">
+      {/* <div className="text-center pb-10 px-5">
         <input
           type="text"
           placeholder="Type Keywords"
@@ -33,7 +33,7 @@ const Blogs = () => {
           <p className=" btn btn-xs btn-accent rounded-full">Topi5</p>
           <p className=" btn btn-xs btn-accent rounded-full">Topi6</p>
         </div>
-      </div>
+      </div> */}
       <div className="grid grid-cols-1 gap-5 md:w-[800px] mx-auto">
         {blogs.map((blog) => (
           <BlogContainer key={blog._id} blog={blog}></BlogContainer>
