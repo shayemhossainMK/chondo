@@ -46,12 +46,14 @@ const AddBlogs = () => {
     <div>
       <div class="hero min-h-screen bg-base-200 py-7 md:py-10">
         <div class="hero-content flex-col lg:flex-row-reverse px-3 md:px-20">
-          <div class="text-center lg:text-left">
+          <div class="text-center lg:text-center">
             <h1 class="text-5xl font-bold">Post new blog</h1>
             <p class="py-6">
-              Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
-              excepturi exercitationem quasi. In deleniti eaque aut repudiandae
-              et a id nisi.
+              Knowing is the first step of accepting. Chondo has your back.
+              Chondo is a period tracker intended to assist you in staying
+              informed and making educated health decisions, whether it's for
+              period tracking, receiving reminders on the ovulation day, or
+              simply learning more about your body's individual patterns.
             </p>
           </div>
           <div class="card flex-shrink-0 w-full max-w-xl shadow-2xl bg-base-100">
@@ -70,7 +72,7 @@ const AddBlogs = () => {
                 </div>
                 <div class="form-control">
                   <label class="label">
-                    <span class="label-text">Photo</span>
+                    <span class="label-text">Photo (368 x 234 pixels)</span>
                   </label>
                   <input
                     type="text"
