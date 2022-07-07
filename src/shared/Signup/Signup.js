@@ -1,40 +1,35 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
-import google from "../../imgs/google.svg";
-import {
-  useCreateUserWithEmailAndPassword,
-  useSignInWithGoogle,
-} from "react-firebase-hooks/auth";
+
+import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
 import { auth } from "../../firebase.init";
+import useToken from "../../hooks/useToken";
 
 const Signup = () => {
   const [createUserWithEmailAndPassword, user, error] =
     useCreateUserWithEmailAndPassword(auth);
-  const [signInWithGoogle, googleUser, googleLoading, googleError] =
-    useSignInWithGoogle(auth);
   const navigate = useNavigate();
 
+  const [token] = useToken(user);
   const handleSignup = (e) => {
     e.preventDefault();
 
     const email = e.target.email.value;
     const password = e.target.password.value;
-    console.log(email, password);
+
     createUserWithEmailAndPassword(email, password);
   };
   let errorElement;
-  if (error || googleError) {
+  if (error) {
     errorElement = (
       <div>
         <p>
-          <span className="text-primary ml-1">
-            {error?.message} {googleError?.message}
-          </span>
+          <span className="text-primary ml-1">{error?.message}</span>
         </p>
       </div>
     );
   }
-  if (user || googleUser) {
+  if (token) {
     navigate("/");
   }
   return (

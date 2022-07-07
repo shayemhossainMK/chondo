@@ -1,23 +1,21 @@
 import React, { useRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import google from "../../imgs/google.svg";
-import {
-  useSignInWithEmailAndPassword,
-  useSignInWithGoogle,
-} from "react-firebase-hooks/auth";
+
+import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
 import { auth } from "../../firebase.init";
 import "react-toastify/dist/ReactToastify.css";
 import { toast, ToastContainer } from "react-toastify";
 import { sendPasswordResetEmail } from "firebase/auth";
+import useToken from "../../hooks/useToken";
 
 const Login = () => {
   const emailRef = useRef("");
   const passwordRef = useRef("");
   const [signInWithEmailAndPassword, user, loading, error] =
     useSignInWithEmailAndPassword(auth);
-  const [signInWithGoogle, googleUser, googleLoading, googleError] =
-    useSignInWithGoogle(auth);
+
   const navigate = useNavigate();
+  const [token] = useToken(user);
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -46,7 +44,7 @@ const Login = () => {
       </div>
     );
   }
-  if (user || googleUser) {
+  if (token) {
     navigate("/");
   }
   return (

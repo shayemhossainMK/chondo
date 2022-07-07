@@ -9,11 +9,11 @@ const AddBlogs = () => {
 
     const name = e.target.name.value;
     const img = e.target.img.value;
-    const like = e.target.like.value;
-    const views = e.target.views.value;
+    // const like = e.target.like.value;
+    // const views = e.target.views.value;
     const text = e.target.text.value;
 
-    const data = { name, img, text, like, views };
+    const data = { name, img, text };
 
     // const formData = new FormData();
     // formData.append("image", img);
@@ -76,7 +76,7 @@ const AddBlogs = () => {
                     class="input input-bordered pt-1.5"
                   />
                 </div>
-                <div class="form-control">
+                {/* <div class="form-control">
                   <label class="label">
                     <span class="label-text">Like Amount</span>
                   </label>
@@ -86,8 +86,8 @@ const AddBlogs = () => {
                     placeholder="Like amount"
                     class="input input-bordered"
                   />
-                </div>
-                <div class="form-control">
+                </div> */}
+                {/* <div class="form-control">
                   <label class="label">
                     <span class="label-text">Views Amount</span>
                   </label>
@@ -97,7 +97,7 @@ const AddBlogs = () => {
                     placeholder="Views amount"
                     class="input input-bordered"
                   />
-                </div>
+                </div> */}
                 <div class="form-control">
                   <label class="label">
                     <span class="label-text">Blog Content</span>

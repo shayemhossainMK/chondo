@@ -15,7 +15,7 @@ const BlogDetails = () => {
         <div className="col-span-2 order-2 md:order-1">
           <div>
             <h1 className="text-3xl font-bold mt-1">{name}</h1>
-            <div className="flex mt-2 mb-5">
+            {/* <div className="flex mt-2 mb-5">
               <p className="mr-4">
                 <FontAwesomeIcon className="text-blue-500" icon={faThumbsUp} />{" "}
                 {like} Likes
@@ -24,8 +24,8 @@ const BlogDetails = () => {
                 <FontAwesomeIcon className="text-red-500" icon={faEye} />{" "}
                 {views} views
               </p>
-            </div>
-            <p className="mt-1">{text}</p>
+            </div> */}
+            <p className="mt-1 md:mt-5">{text}</p>
           </div>
         </div>
         <div className="order-1 md:order-2">

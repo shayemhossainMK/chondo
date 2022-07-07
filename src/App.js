@@ -4,11 +4,13 @@ import AddBlogs from "./pages/AddBlogs/AddBlogs";
 import BlogDetails from "./pages/Blogs/BlogDetails";
 import Blogs from "./pages/Blogs/Blogs";
 import Home from "./pages/Home/Home";
+import MakeAdmin from "./pages/MakeAdmin/MakeAdmin";
 import ManageChondo from "./pages/ManageChondo/ManageChondo";
 import PrivacyPolicy from "./pages/PrivacyPolicy/PrivacyPolicy";
 import Footer from "./shared/Footer/Footer";
 import Login from "./shared/Login/Login";
 import Navbar from "./shared/Navbar/Navbar";
+import RequireAdmin from "./shared/RequireAdmin/RequireAdmin";
 import RequireAuth from "./shared/RequireAuth/RequireAuth";
 import Signup from "./shared/Signup/Signup";
 
@@ -45,6 +47,14 @@ function App() {
             <RequireAuth>
               <ManageChondo></ManageChondo>
             </RequireAuth>
+          }
+        ></Route>
+        <Route
+          path="/makeadmin"
+          element={
+            <RequireAdmin>
+              <MakeAdmin></MakeAdmin>
+            </RequireAdmin>
           }
         ></Route>
         <Route
