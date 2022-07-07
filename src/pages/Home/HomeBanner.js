@@ -1,6 +1,8 @@
 import React from "react";
 import bannerImg from "../../imgs/Chondo App 1.png";
 import watch from "../../imgs/Vector 50.png";
+import btn1 from "../../imgs/btn1.png";
+import btn2 from "../../imgs/btn2.png";
 
 const HomeBanner = () => {
   return (
@@ -24,13 +26,19 @@ const HomeBanner = () => {
                 </label>
                 <ul
                   tabindex="0"
-                  class="dropdown-content menu p-2 mt-3 shadow bg-red-100 rounded-box w-52"
+                  class="dropdown-content menu py-2 mt-3 shadow bg-red-100 rounded-box w-52"
                 >
                   <li>
-                    <a>Item 1</a>
+                    <a>
+                      <img className="w-7" src={btn1} alt="" /> Playstore
+                      (Android)
+                    </a>
                   </li>
                   <li>
-                    <a>Item 2</a>
+                    <a>
+                      <img className="w-7" src={btn2} alt="" />
+                      APP Store (iOS)
+                    </a>
                   </li>
                 </ul>
               </div>
