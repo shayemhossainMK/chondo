@@ -15,18 +15,40 @@ const HomeBanner = () => {
               Track Your Period <br /> Know Your Body
             </h1>
             <div className="mt-10 flex ">
-              <button className="btn bg-primary text-white border-none hover:bg-primary">
-                Download
-              </button>
-              <button className="btn btn-primary btn-outline ml-5">
-                {" "}
-                <img
-                  className="bg-[#FF4085] h-5 w-5 p-1 mr-2 rounded-full"
-                  src={watch}
-                  alt=""
-                />
-                Watch
-              </button>
+              <div className="dropdown">
+                <label
+                  tabindex="0"
+                  className="btn bg-primary text-white border-none hover:bg-primary"
+                >
+                  Download
+                </label>
+                <ul
+                  tabindex="0"
+                  class="dropdown-content menu p-2 mt-3 shadow bg-red-100 rounded-box w-52"
+                >
+                  <li>
+                    <a>Item 1</a>
+                  </li>
+                  <li>
+                    <a>Item 2</a>
+                  </li>
+                </ul>
+              </div>
+
+              <a
+                href="https://www.youtube.com/channel/UCJ3sW_6kBDZqDRGAqPQg8NA"
+                target="_blank"
+              >
+                <button className="btn btn-primary btn-outline ml-5">
+                  {" "}
+                  <img
+                    className="bg-[#FF4085] h-5 w-5 p-1 mr-2 rounded-full"
+                    src={watch}
+                    alt=""
+                  />
+                  Watch
+                </button>
+              </a>
             </div>
           </div>
           <div className="">

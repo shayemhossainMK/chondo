@@ -13,7 +13,7 @@ const BlogContainer = ({ blog }) => {
 
   return (
     <div>
-      <div className="bg-base-100 grid grid-cols-1 md:grid-cols-2 shadow-xl rounded-2xl py-5 h-auto">
+      <div className="bg-base-100 grid grid-cols-1 md:grid-cols-2 shadow-xl rounded-2xl py-5 h-auto px-3 ">
         <div>
           <img className="w-96 h-[250px] p-2" src={img} alt="" />
         </div>
