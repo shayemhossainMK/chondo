@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 
 const BlogContainer = ({ blog }) => {
   const navigate = useNavigate();
-  const { _id, name, text, img, like, views } = blog;
+  const { _id, name, text, link } = blog;
 
   const navigateBlogDetails = () => {
     navigate(`/blogdetails/${_id}`);
@@ -15,7 +15,7 @@ const BlogContainer = ({ blog }) => {
     <div>
       <div className="bg-base-100 grid grid-cols-1 md:grid-cols-2 shadow-xl rounded-2xl py-3 h-auto px-3 ">
         <div>
-          <img className="w-96 h-[250px] p-2 rounded-xl" src={img} alt="" />
+          <img className="w-96 h-[250px] p-2 rounded-xl" src={link} alt="" />
         </div>
         <div className="px-2">
           <h1

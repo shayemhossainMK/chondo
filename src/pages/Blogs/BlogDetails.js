@@ -7,7 +7,7 @@ import useBlogDetails from "../../hooks/useBlogDetails";
 const BlogDetails = () => {
   const id = useParams();
   const [blog, setBlog] = useBlogDetails(id);
-  const { _id, name, text, img, like, views } = blog;
+  const { _id, name, text, link } = blog;
 
   return (
     <div className="px-4 md:px-32">
@@ -29,7 +29,7 @@ const BlogDetails = () => {
           </div>
         </div>
         <div className="order-1 md:order-2">
-          <img className="h-72 w-[700px]" src={img} alt="" />
+          <img className="h-72 w-[700px]" src={link} alt="" />
         </div>
       </div>
     </div>

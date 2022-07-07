@@ -9,11 +9,14 @@ const AddBlogs = () => {
 
     const name = e.target.name.value;
     const img = e.target.img.value;
+    const imgLink = img.split("/")[5];
+    const link = `https://drive.google.com/uc?export=view&id=${imgLink}`;
+    console.log(link);
     // const like = e.target.like.value;
     // const views = e.target.views.value;
     const text = e.target.text.value;
 
-    const data = { name, img, text };
+    const data = { name, link, text };
 
     // const formData = new FormData();
     // formData.append("image", img);
