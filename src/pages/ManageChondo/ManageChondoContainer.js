@@ -4,7 +4,7 @@ import { toast, ToastContainer } from "react-toastify";
 const ManageChondoContainer = ({ blog, index }) => {
   const { _id, img, name, text } = blog;
   const handleDeleteBlog = () => {
-    fetch(`http://localhost:5000/blogs/${_id}`, {
+    fetch(`https://guarded-reef-42297.herokuapp.com/blogs/${_id}`, {
       method: "DELETE",
     })
       .then((res) => res.json())

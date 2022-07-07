@@ -3,7 +3,7 @@ import React from "react";
 const MakeAdminContianer = ({ user, index }) => {
   const { email, role } = user;
   const makeAdmin = () => {
-    fetch(`http://localhost:5000/user/admin/${email}`, {
+    fetch(`https://guarded-reef-42297.herokuapp.com/user/admin/${email}`, {
       method: "PUT",
       headers: {
         "contant-type": "application/json",

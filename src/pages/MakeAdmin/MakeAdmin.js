@@ -4,7 +4,7 @@ import MakeAdminContianer from "./MakeAdminContianer";
 const MakeAdmin = () => {
   const [users, setUsers] = useState([]);
   useEffect(() => {
-    fetch(`http://localhost:5000/user`)
+    fetch(`https://guarded-reef-42297.herokuapp.com/user`)
       .then((res) => res.json())
       .then((data) => setUsers(data));
   }, [users]);
